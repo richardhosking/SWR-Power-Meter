@@ -1,5 +1,0 @@
-(sym_lib_table
-  (lib (name SWRBridge-cache)(type Legacy)(uri /home/oliver/Desktop/Kicad/Projects/SWRBridge/SWRBridge/SWRBridge-cache.lib)(options "")(descr ""))
-  (lib (name SWRBridge-rescue)(type Legacy)(uri ${KIPRJMOD}/SWRBridge-rescue.lib)(options "")(descr ""))
-  (lib (name SI5351)(type Legacy)(uri /home/oliver/Desktop/Kicad/Projects/QRPTXV1Jan27/QRPTransceiver/QRPTransceiver-cache.lib)(options "")(descr ""))
-)
