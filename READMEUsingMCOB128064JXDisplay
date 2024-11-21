@@ -1,0 +1,31 @@
+Driving the MCOB128064JX OLED Display
+There is a datasheet at  https://midasdisplays.com/wp-content/uploads/2023/08/MCOB128064JX-YM.pdf
+Using the Adafruit SSD1305 Library 
+
+However it gives limited data as to drive the display in various interface formats 
+For I2C 
+
+(1) Set jumpers JB1 High
+                JB2 Low 
+(2) Pin 1 VCC 
+    Pin 2 GND 
+    Pin 4 SCL 
+    Pin 5 and 6 SDA - found by experiment!
+    Pin 12 Chip Select (Low)
+    Pin 14 Reset (Low) - seems to work in I2C without 
+    Pin 16 High - read data from Display, Low - Command to display
+        or SA0 for I2C
+    Pin 6-11 parallel data - grounded
+
+(3) Set I2C address (J1C ? Open)
+    0x3C if pin 16 grounded 
+    0x3D if pin 16 High
+
+(4) ?Pin 14 Reset pin should be driven by Arduino - in this case we have set as pin 9 on the Arduino  
+
+(5) Library has constructors for I2C, Software SPI , Hardware SPI 
+    Using I2C in this case
+(6) Call display.begin() after constructor 
+    startup sequence 
+
+
